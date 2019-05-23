@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60sp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="@drawable/rectangle_top_fold2"
+        android:gravity="center_vertical">
+        <!--필터1            -->
+        <LinearLayout
+            android:id="@+id/cafe"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imgCafe"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:src="@drawable/icon_sky_cafe"/>
+            <TextView
+                android:id="@+id/txtCafe"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:text="카페"
+                android:gravity="center_horizontal"/>
+        </LinearLayout>
+        <!--필터2            -->
+        <LinearLayout
+            android:id="@+id/foodStore"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imgFoodStore"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:src="@drawable/icon_sky_food"/>
+            <TextView
+                android:id="@+id/txtFoodStore"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:text="음식점"
+                android:gravity="center_horizontal"/>
+
+        </LinearLayout>
+        <!--필터3            -->
+        <LinearLayout
+            android:id="@+id/place1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imgPlace1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:src="@drawable/icon_sky_place"/>
+            <TextView
+                android:id="@+id/txtPlace1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:text="관광명소"
+                android:gravity="center_horizontal"/>
+
+        </LinearLayout>
+        <!--필터4            -->
+        <LinearLayout
+            android:id="@+id/place2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imgPlace2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:src="@drawable/icon_sky_place2"/>
+            <TextView
+                android:id="@+id/txtPlace2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:text="박물관"
+                android:gravity="center_horizontal"/>
+
+        </LinearLayout>
+        <!--필터5            -->
+        <LinearLayout
+            android:id="@+id/tema"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imgTema"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"/>
+            <TextView
+                android:id="@+id/txtTema"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:text="테마/체험"/>
+
+        </LinearLayout>
+        <!--필터6            -->
+        <LinearLayout
+            android:id="@+id/shopping"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imgShopping"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"/>
+            <TextView
+                android:id="@+id/txtShopping"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"
+                android:text="쇼핑"
+                android:gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

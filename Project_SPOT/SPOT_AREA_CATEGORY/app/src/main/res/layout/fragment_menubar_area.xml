@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60sp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/menuBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="@drawable/rectangle_top_fold2"
+        android:gravity="center_vertical">
+        <!--이부분 뭐로 구현해야되지?-->
+        <Button
+            android:id="@+id/btnSelectArea"
+            android:layout_width="85dp"
+            android:layout_height="35dp"
+            android:text="전 지역"
+            android:textColor="#79ABFF"
+            android:textStyle="bold"
+            android:paddingRight="19dp"
+            android:background="@drawable/f_area"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="4dp"/>
+        <Button
+            android:id="@+id/btnFood"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:background="@drawable/f_food0"
+            android:text="식사"
+            android:paddingLeft="12dp"
+            android:textSize="15dp"
+            android:textColor="#79ABFF"
+            android:textStyle="bold"
+            android:layout_marginRight="4dp"/>
+        <Button
+            android:id="@+id/btnCafe"
+            android:layout_width="65dp"
+            android:layout_height="35dp"
+            android:background="@drawable/f_cafe0"
+            android:text="카페"
+            android:paddingLeft="15dp"
+            android:textColor="#79ABFF"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginRight="4dp"/>
+        <Button
+            android:id="@+id/btnPlace"
+            android:layout_width="95dp"
+            android:layout_height="35dp"
+            android:background="@drawable/f_place0"
+            android:text="관광명소"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="#79ABFF"
+            android:paddingLeft="22dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

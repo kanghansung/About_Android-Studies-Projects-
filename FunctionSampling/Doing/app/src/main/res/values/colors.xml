@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="tag_assignment">#FA7575</color>
+    <color name="tag_daily">#FAB375</color>
+    <color name="tag_presentation">#CA75FA</color>
+    <color name="tag_greyBackground">#E5E5E5</color>
+
+    <!--마이페이지 컬러-->
+    <color name="mypage_red">#FA7575</color>
+    <color name="mypage_blue">#7590FA</color>
+    <color name="mypage_grey">#6E6E6E</color>
+</resources>

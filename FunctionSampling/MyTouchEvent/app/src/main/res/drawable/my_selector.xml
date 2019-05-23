@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_focused="true"
+        android:state_pressed="true"
+        android:drawable="@drawable/iconfinder_windows_logo_windows_logo_windows_os_windows_operating_system_windows_8_windows_symbol_red_1165767"/>
+    <item
+        android:drawable="@drawable/iconfinder_twitter_square_107066"/>
+
+</selector>

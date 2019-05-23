@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#ffffff"
+    android:orientation="horizontal">
+    <!--bar 2개로 분리하는 흰줄 넣기-->
+    </LinearLayout>
+
+    <!--메뉴 bar-->
+    <LinearLayout
+    android:id="@+id/menuBar"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="horizontal"
+    android:background="@drawable/rectangle_top_fold2"
+    android:gravity="center_vertical">
+    <!--이부분 뭐로 구현해야되지?-->
+    <Button
+    android:id="@+id/btnSelectArea"
+    android:layout_width="85dp"
+    android:layout_height="35dp"
+    android:background="@drawable/f_area"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="4dp"/>
+    <Button
+    android:id="@+id/btnFood"
+    android:layout_width="60dp"
+    android:layout_height="35dp"
+    android:background="@drawable/f_food0"
+    android:text="식사"
+    android:paddingLeft="12dp"
+    android:textSize="15dp"
+    android:textColor="#79ABFF"
+    android:textStyle="bold"
+    android:layout_marginRight="4dp"/>
+    <Button
+    android:id="@+id/btnCafe"
+    android:layout_width="65dp"
+    android:layout_height="35dp"
+    android:background="@drawable/f_cafe0"
+    android:text="카페"
+    android:paddingLeft="15dp"
+    android:textColor="#79ABFF"
+    android:textStyle="bold"
+    android:textSize="15dp"
+    android:layout_marginRight="4dp"/>
+    <Button
+    android:id="@+id/btnPlace"
+    android:layout_width="95dp"
+    android:layout_height="35dp"
+    android:background="@drawable/f_place0"
+    android:text="관광명소"
+    android:textSize="15dp"
+    android:textStyle="bold"
+    android:textColor="#79ABFF"
+    android:paddingLeft="22dp"/>
+
+    </LinearLayout>
+
+    <!--리스트 표현-->
+    <LinearLayout
+        android:id="@+id/showList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp">
+
+        </ListView>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/list_bottom1_remake"
+            android:scaleType="centerCrop"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/txtReset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="리셋"
+                        android:textSize="16dp"
+                        android:textColor="#55B7E4"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="end">
+                    <TextView
+                        android:id="@+id/txtAllow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="확인"
+                        android:textSize="16dp"
+                        android:textColor="#55B7E4"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

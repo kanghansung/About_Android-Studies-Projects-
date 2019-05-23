@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120sp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iconDrawable"
+        android:layout_width="40sp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/img"
+        android:scaleType="fitCenter"/>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/nameShop"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="복덕방"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="5dp"/>
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="16dp"
+                android:src="@drawable/icon_spot"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/place1Shop"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="위치1"
+                android:gravity="center_vertical"
+                android:textSize="14dp"
+                android:textColor="#414141"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/kindOfShop"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="가게종류"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="5dp"/>
+            <TextView
+                android:id="@+id/place2Shop"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="위치2"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="27dp"
+                android:background="@drawable/rounded"
+                android:layout_marginLeft="5dp"/>
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="27dp"
+                android:background="@drawable/rounded_star"
+                android:layout_marginLeft="5dp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/button_check"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--main1 레이아웃-->
+        <LinearLayout
+            android:id="@+id/main1Layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg2"
+            android:orientation="vertical">
+
+            <!--새 여행하기 레이아웃-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--뒤로가기버튼-->
+                <Button
+                    android:id="@+id/backButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/icon_back" />
+
+                <!--새 여행하기 text 레이아웃-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="40dp"
+                        android:layout_marginVertical="10dp"
+                        android:fontFamily="@font/spoqa_han_sans_thin"
+                        android:text="새 여행하기"
+                        android:textColor="#88000000"
+                        android:textSize="32dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!--버튼 레이아웃-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <!--여행 일정-->
+                    <RelativeLayout
+                        android:id="@+id/travelScheduleButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="5dp"
+                        android:background="@drawable/rectangle">
+
+                        <TextView
+                            android:id="@+id/tvTravelSchedule"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:fontFamily="@font/spoqa_han_sans_regular"
+                            android:text="여행 일정"
+                            android:textColor="#434343"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/tvNext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toEndOf="@id/tvTravelSchedule"
+                            android:fontFamily="@font/spoqa_han_sans_regular"
+                            android:text="~"
+                            android:textColor="#434343"
+                            android:textSize="14dp"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tvSetLastDay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toEndOf="@id/tvNext"
+                            android:fontFamily="@font/spoqa_han_sans_regular"
+                            android:text="오는날 설정"
+                            android:textColor="#434343"
+                            android:textSize="14dp"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginHorizontal="10dp"
+                            android:background="@drawable/icon_calender" />
+                    </RelativeLayout>
+
+                    <!--인원수-->
+                    <RelativeLayout
+                        android:id="@+id/peopleNumberButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="5dp"
+                        android:background="@drawable/rectangle">
+
+                        <TextView
+                            android:id="@+id/peopleNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginHorizontal="20dp"
+                            android:fontFamily="@font/spoqa_han_sans_regular"
+                            android:text="인원수"
+                            android:textColor="#434343"
+                            android:textSize="14dp" />
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginHorizontal="10dp"
+                            android:background="@drawable/icon_person" />
+                    </RelativeLayout>
+
+                    <!--숙소 찾기-->
+                    <RelativeLayout
+                        android:id="@+id/searchHotelButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="5dp"
+                        android:background="@drawable/rectangle"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true">
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginHorizontal="20dp"
+                            android:background="@null"
+                            android:fontFamily="@font/spoqa_han_sans_regular"
+                            android:hint="숙소 입력"
+                            android:id="@+id/edtInputMyHotel"
+                            android:inputType="text"
+                            android:textColor="#434343"
+                            android:textSize="14dp" />
+
+                        <ImageButton
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginHorizontal="10dp"
+                            android:background="@drawable/icon_hotel" />
+                    </RelativeLayout>
+
+                    <!--새 여행 등록하기-->
+                    <Button
+                        android:id="@+id/makeNewTravel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="5dp"
+                        android:background="@drawable/button3"
+                        android:fontFamily="@font/spoqa_han_sans_bold"
+                        android:text="새 여행 등록하기"
+                        android:textColor="#ffffff"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--실선-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#C3C3C3"
+                android:orientation="vertical"></LinearLayout>
+
+            <!--이전여행보기 레이아웃-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--이전 여행보기 text 레이아웃-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="40dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/spoqa_han_sans_thin"
+                        android:text="이전 여행보기"
+                        android:textColor="#88000000"
+                        android:textSize="32dp" />
+                </LinearLayout>
+                <!--이전여행리스트-->
+                <ListView
+                    android:id="@+id/listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="10dp"></ListView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!--Popup 레이아웃-->
+        <RelativeLayout
+            android:id="@+id/popupLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--상단 어둡게 처리-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical"
+                android:scaleX="2"
+                android:src="@drawable/bg_black"></ImageView>
+
+            <!--popup-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/popup"
+                android:orientation="vertical">
+
+                <!--인원선택   X-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginHorizontal="20dp"
+                        android:fontFamily="@font/spoqa_han_sans_thin"
+                        android:text="인원 선택"
+                        android:textColor="#434343"
+                        android:textSize="20dp" />
+
+                    <!--X버튼-->
+                    <Button
+                        android:id="@+id/xButton"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="@drawable/x" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <!--성인-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginHorizontal="25dp"
+                                android:fontFamily="@font/spoqa_han_sans_light"
+                                android:text="성인"
+                                android:textColor="#000000"
+                                android:textSize="20dp" />
+
+                            <!--성인 수 조절키-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+
+                                >
+
+                                <ImageButton
+                                    android:id="@+id/adultMinusButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="#00ffffff"
+                                    android:src="@drawable/minus" />
+
+                                <TextView
+                                    android:id="@+id/adultNumber"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="25dp"
+                                    android:fontFamily="@font/spoqa_han_sans_regular"
+                                    android:text="0"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <ImageButton
+                                    android:id="@+id/adultPlusButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="#00ffffff"
+                                    android:src="@drawable/plus" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <!--아이-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginHorizontal="25dp"
+                                android:fontFamily="@font/spoqa_han_sans_light"
+                                android:text="아이"
+                                android:textColor="#000000"
+                                android:textSize="20dp" />
+                            <!--아이 수 조절키-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageButton
+                                    android:id="@+id/kidMinusButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="#00ffffff"
+                                    android:src="@drawable/minus" />
+
+                                <TextView
+                                    android:id="@+id/kidNumber"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="25dp"
+                                    android:fontFamily="@font/spoqa_han_sans_regular"
+                                    android:text="0"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <ImageButton
+                                    android:id="@+id/kidPlusButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="#00ffffff"
+                                    android:src="@drawable/plus" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--총인원-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/totalPeople"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button0"
+                        android:fontFamily="@font/spoqa_han_sans_bold"
+                        android:gravity="center"
+                        android:text="총 0인"
+                        android:textColor="#ffffff"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+</LinearLayout>

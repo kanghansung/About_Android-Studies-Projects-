@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DoingProject</string>
+    <string name="title_name">TODO LIST</string>
+    <string name="new_schedule">NEW SCHEDULE</string>
+</resources>
