@@ -1,1 +1,3 @@
-#Android_Checkmate
+#Android_Studies-FunctionSampling
+#Android_Project-Checkmate
+#Android_Project-SPOT
